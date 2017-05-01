@@ -1,0 +1,16 @@
+
+
+ALTER TABLE `posts`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `userroles`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`username`);
+
+
+ALTER TABLE `posts`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+ALTER TABLE `userroles`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
