@@ -1,0 +1,32 @@
+html, main {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
+.row {
+    min-height: 100vh;
+}
+
+.nav {
+    background-color: #f7f7f7;
+    height: 100vh;
+}
+
+.nav-item {
+    padding-bottom: 20px;
+}
+
+.router-link-active {
+    color: #fff!important;
+    cursor: default;
+    background-color: #0275d8;
+}
+
+.router-link-active:focus {
+    color: #fff!important;
+    cursor: default;
+    background-color: #0275d8;
+}

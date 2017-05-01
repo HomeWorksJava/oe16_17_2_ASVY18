@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+            integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+            integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+            integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+            crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="container-fluid h-100 px-0" id="app">
+    <div class="row mx-0">
+        <nav class="col-4 px-0">
+            <ul class="nav nav-pills flex-column h-100 p-5 text-center">
+                <div class="nav-item">
+                    <router-link class="nav-link text-uppercase" to="/posts">Posts</router-link>
+                </div>
+                <div class="nav-item">
+                    <router-link class="nav-link text-uppercase" to="/admin">Admin</router-link>
+                </div>
+                <div class="nav-item">
+                    <router-link class="nav-link text-uppercase" to="/login">Login</router-link>
+                </div>
+            </ul>
+        </nav>
+        <main class="col-8 px-0 py-5">
+            <router-view></router-view>
+        </main>
+    </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
