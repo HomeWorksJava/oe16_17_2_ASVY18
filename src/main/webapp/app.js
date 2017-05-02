@@ -29,7 +29,7 @@ const Posts = {
         fetchData: function () {
             var xhr = new XMLHttpRequest()
             var self = this
-            xhr.open('GET', 'http://localhost:8080/blog/api/posts/all')
+            xhr.open('GET', '/blog/api/posts/all')
             xhr.onload = function () {
                 self.posts = JSON.parse(xhr.responseText)
             }
@@ -71,11 +71,21 @@ const Admin = {
 
             var xhr = new XMLHttpRequest()
             var data = JSON.stringify({title: self.title, content: self.content})
-            xhr.open('POST', 'http://localhost:8080/blog/api/posts/', true)
-            xhr.setRequestHeader("Content-Type", "application/json")
+            xhr.open('POST', '/blog/api/posts/', true)
+            xhr.setRequestHeader('Content-Type', 'application/json')
+            xhr.onload = function() {
+                if(xhr.status != '200')
+                {
+                    alert("Error")
+                }
+                else
+                {
+                    self.title = ''
+                    self.content = ''
+                    alert("Success")
+                }
+            }
             xhr.send(data)
-
-            alert("Success")
         }
     }
 }
