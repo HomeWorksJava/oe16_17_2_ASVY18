@@ -13,8 +13,9 @@ const Posts = {
         <div class="card-block text-justify">
             <p class="card-text">{{post.content}}</p>
         </div>
-        <div class="card-footer text-muted text-center">
-            {{post.created}}
+        <div class="card-footer text-muted d-flex justify-content-between align-items-center">
+            <i>{{post.created}}</i>
+            <i class="fa fa-trash-o" aria-hidden="true" v-on:click="deletePost(post.id)"></i>
         </div>
     </div>
 </div>
@@ -32,6 +33,21 @@ const Posts = {
             xhr.open('GET', '/blog/api/posts/all')
             xhr.onload = function () {
                 self.posts = JSON.parse(xhr.responseText)
+            }
+            xhr.send()
+        },
+        deletePost: function (id) {
+            var xhr = new XMLHttpRequest()
+            xhr.open('DELETE', 'http://localhost:8080/blog/api/posts?id=' + id)
+            xhr.onload = function() {
+                if(xhr.status != '200')
+                {
+                    alert("Error")
+                }
+                else
+                {
+                    alert("Post deleted")
+                }
             }
             xhr.send()
         }
