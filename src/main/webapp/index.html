@@ -17,20 +17,24 @@
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
     <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <div class="container-fluid h-100 px-0" id="app">
     <div class="row mx-0">
         <nav class="col-4 px-0">
             <ul class="nav nav-pills flex-column h-100 p-5 text-center">
+                <div class="d-inline-flex pb-5 mx-auto">
+                    <h5 class="pr-2 mb-0">Blog by</h5>
+                    <i>Adrian Nemeth</i></div>
                 <div class="nav-item">
-                    <router-link class="nav-link text-uppercase" to="/posts">Posts</router-link>
+                    <router-link class="nav-link text-uppercase" to="/posts"><i class="fa fa-newspaper-o pr-2" aria-hidden="true"></i>Posts</router-link>
                 </div>
                 <div class="nav-item">
-                    <router-link class="nav-link text-uppercase" to="/admin">Admin</router-link>
+                    <router-link class="nav-link text-uppercase" to="/admin"><i class="fa fa-lock pr-2" aria-hidden="true"></i>Admin</router-link>
                 </div>
                 <div class="nav-item">
-                    <router-link class="nav-link text-uppercase" to="/login">Login</router-link>
+                    <router-link class="nav-link text-uppercase" to="/login"><i class="fa fa-sign-in pr-2" aria-hidden="true"></i>Login</router-link>
                 </div>
             </ul>
         </nav>
